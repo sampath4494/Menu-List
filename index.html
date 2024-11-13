@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu List</title>
+    <!-- <video autoplay muted loop class="background-video">
+        <source src="./Background/bg.mp4" type="video/mp4">
+    </video> -->
+    <div class="underline mb-5"></div>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fonts-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            height: 110vh;
+            font-size: 15px;
+            line-height: 1.90;
+            color: chocolate;
+            font-family: 'open', sans-serif;
+            font-weight: 400;
+            overflow-x: hidden;
+            background: linear-gradient(rgba(5, 255, 255, 0.5), rgba(247, 111, 0, 0.5)), url('C:/Users/DELL/Desktop/Restaurant/Assest/img/menubg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Optional, keeps the image fixed while scrolling */
+            background-size: cover;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .background-video::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(129, 239, 241, 0.5); /* Adjust the RGB values and opacity as needed */
+            z-index: 1;
+        }
+
+        .background-bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    
+        .bubble {
+            position: absolute;
+            background-color: rgba(234, 121, 8, 0.6);
+            border-radius: 50%;
+            animation: bubbleAnimation 5s infinite;
+        }
+    
+
+    .bubble.bubble1 {
+        position: absolute;
+        background-color: rgba(15, 233, 229, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 80%;
+        left: 10%;
+    }
+
+    .bubble.bubble2 {
+        position: absolute;
+        background-color: rgba(234, 121, 8, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 80%;
+        left: 25%;
+    }
+
+    .bubble.bubble3 {
+        position: absolute;
+        background-color: rgba(19, 222, 181, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 80%;
+        left:45%;
+    }
+    .bubble.bubble4 {
+        position: absolute;
+        background-color:  rgba(234, 121, 8, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 30px;
+        height: 29px;
+        top: 80%;
+        left: 60%;
+    }  
+     .bubble.bubble5 {
+        position: absolute;
+        background-color:rgba(19, 222, 181, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top:80%;
+        left:80%;
+    }  
+     .bubble.bubble6 {
+        position: absolute;
+        background-color: rgba(234, 121, 8, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 80%;
+        left:90%;
+    }
+    .bubble.bubble7 {
+        position: absolute;
+        background-color: rgba(18, 188, 186, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 20%;
+        left: 10%;
+    }
+
+    .bubble.bubble8 {
+        position: absolute;
+        background-color: rgba(236, 151, 14, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 20%;
+        left: 25%;
+    }
+
+    .bubble.bubble9 {
+        position: absolute;
+        background-color:  rgba(19, 235, 231, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 20%;
+        left:45%;
+    }
+    .bubble.bubble10 {
+        position: absolute;
+        background-color:  rgba(236, 151, 14, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 30px;
+        height: 29px;
+        top: 20%;
+        left: 70%;
+    }  
+     .bubble.bubble16 {
+        position: absolute;
+        background-color:  rgba(236, 151, 14, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 30px;
+        height: 29px;
+        top: 20%;
+        left: 80%;
+    }  
+     .bubble.bubble11 {
+        position: absolute;
+        background-color:rgba(19, 235, 231, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top:50%;
+        left:80%;
+    }  
+     .bubble.bubble12 {
+        position: absolute;
+        background-color: rgba(240, 146, 31, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 20%;
+        left:90%;
+    }
+   .bubble.bubble13 {
+        position: absolute;
+        background-color:  rgba(236, 151, 14, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 30px;
+        height: 29px;
+        top: 50%;
+        left: 40%;
+    }  
+     .bubble.bubble14 {
+        position: absolute;
+        background-color:rgba(19, 235, 231, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top:50%;
+        left:20%;
+    }  
+     .bubble.bubble15 {
+        position: absolute;
+        background-color: rgba(240, 146, 31, 0.6);
+        border-radius: 50%;
+        animation: bubbleAnimation 5s infinite;
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        left:60%;
+    }
+
+    /* Customize bubble styles and positions as needed */
+
+    @keyframes bubbleAnimation {
+        0% {
+            transform: translateY(0) scale(1);
+        }
+        50% {
+            transform: translateY(-100%) scale(1.2);
+        }
+        100% {
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .background-image {
+        background-image: url('C:/Users/DELL/Desktop/Restaurant/Menu.html/color.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional, keeps the image fixed while scrolling */
+        background-size: cover;
+    }
+
+    .section-padding {
+        padding: 60px 0px;
+    }
+
+    .marb-37 {
+        text-align: center;
+        font-size: 70px;
+        margin: 0%;
+    }
+
+    @keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+.header-h {
+    font-size: 17vh;
+    color: rgb(244, 119, 2); 
+    font-family: 'Satisfy', cursive;
+    font-weight: 900;
+    margin: 5px;
+    animation: slideInFromRight 1s ease-out; /* Apply the right to left animation */
+}
+
+
+.header-p {
+    color: #ad4c07;
+    font-size: 30px;
+    margin-bottom:40px;
+    animation: slideInFromLeft 1s ease-out; /* Apply the left to right animation */
+}
+
+
+
+    ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu-flters ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #menu-flters ul li {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    #menu-flters ul li a {
+    padding: 10px 35px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 0px;
+    border: 2px solid #0fa2bc;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    width: 100px; /* Ensure consistent width */
+    text-align: center; /* Center text */
+}
+
+
+    #menu-flters ul li a.active,
+    #menu-flters ul li a:hover {
+        background: #29c8ba;
+        color: #ffffff;
+        border: 3px solid rgb(225, 110, 27);
+    }
+
+    .right-side-column {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 20px;
+    }
+
+    .right-side-column ul {
+        text-align: right;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .right-side-column li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .right-side-column a {
+        color: #fff;
+    }
+
+    .right-side-column a:hover {
+        color: #f1520e;
+    }
+
+    .menu-restaurant {
+        width: 50%;
+        float: left;
+        padding: 15px;
+        position: relative;
+    }
+
+    .menu-restaurant .menu-title {
+        float: left;
+        font-family: Montserrat, arial;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ff5821;
+    }
+
+    .menu-restaurant .menu-line {
+        position: absolute;
+        bottom: 6px;
+        border-bottom: 1px dotted rgba(205, 63, 6, 0.3);
+        margin-left: .6rem;
+        margin-right: .6rem;
+    }
+
+    .menu-restaurant .menu-price {
+        font-weight: 600;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .menu-restaurant .menu-subtitle {
+        display: block;
+        float: left;
+        color: #b1b1b1;
+        font-size: 1.2rem;
+    }
+
+    .menu-restaurant span.clearfix {
+        position: relative;
+        display: block;
+    }
+
+    .underline {
+        position: fixed;
+        margin-left: 10%;
+        left: 600px;
+        background-color: #4eacf0;
+    }
+
+    .back-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+        #menu-flters ul li {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .menu-restaurant {
+            width: 100%;
+        }
+    }
+  
+
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-link {
+    color: #0fa2bc;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #29c8ba;
+}
+
+.footer-copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+
+ <div class="background-bubbles">
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+     <div class="bubble bubble4"></div>
+   <!--- <div class="bubble bubble5"></div>
+    <div class="bubble bubble6"></div>
+    <div class="bubble bubble7"></div>
+    <div class="bubble bubble8"></div>
+    <div class="bubble bubble9"></div>-->
+    <div class="bubble bubble10"></div>
+     <div class="bubble bubble11"></div> 
+    <div class="bubble bubble12"></div>
+    <div class="bubble bubble13"></div>
+    <div class="bubble bubble14"></div>
+    <div class="bubble bubble15"></div>
+    <div class="bubble bubble16"></div> 
+   
+</div>
+<div class="background-image"></div>
+<section id="Menu-List" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center marb-37">
+                <h1 class="header-h">Menu List</h1>
+                <p class="header-p">Experience culinary excellence with our menu, crafted with passion and precision, from delightful starters to decadent desserts, ensuring an unforgettable journey.</p>
+            </div>
+            <div class="col-md-12 text-center" id="menu-flters">
+                <nav>
+                    <ul>
+                        <li><a href="breakfast.html"><b>Breakfast</b></a></li>
+                        <li><a href="lunch.html"><b>Lunch</b></a></li>
+                        <li><a href="dinner.html"><b>Dinner</b></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-content">
+        <a href="https://www.linkedin.com/in/sampath-kumar-prathipati-3a2689252" target="_blank" class="footer-link">LinkedIn</a>
+        <a href="mailto:your-email@example.com" class="footer-link">prathipatisampath4@gmail.com</a>
+        <p>
+            Created with ❤️  &nbsp;
+            <a className="website-link" href="https://sampath4494.github.io/Portfolio/">
+                Sampath Kumar
+            </a>
+        </p>
+    </div>
+</footer>
+
+<script src="script.js">
+    document.getElementById('goBack').addEventListener('click', function() {
+    window.history.back();
+});
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
+</body>
+</html>
